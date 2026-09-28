@@ -1,0 +1,11 @@
+# Render one-click deploy for JAMGROUP license + reviews API (stdlib only)
+services:
+  - type: web
+    name: jam-license
+    runtime: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python server.py"
+    envVars:
+      - key: ADMIN_KEY
+        value: JAM-ADMIN-CHANGE-ME
